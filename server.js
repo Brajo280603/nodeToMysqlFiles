@@ -26,7 +26,7 @@ app.post('/upload',express.json(), (req, res) => {
 
 
   connection.query("INSERT INTO `test_db`.`data` (`email`,`name`) VALUES ('"+req.body.email+"','"+req.body.name+"')")
-  console.log("data inserted : "+req.body.email+" and "+req.body.name)
+  console.log("data checked : "+req.body.email+" and "+req.body.name)
 
 
 
