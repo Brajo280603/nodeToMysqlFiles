@@ -7,7 +7,7 @@ const app = express()
 
 app.use(cors())
 
-const mysql = require('mysql')
+const mysql = require('mysql') //mysql2 is preferable if any error related to AUTH_MODE
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
