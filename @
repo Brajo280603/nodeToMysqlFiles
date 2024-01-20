@@ -7,7 +7,7 @@ const app = express()
 
 app.use(cors())
 
-const mysql = require('mysql') //mysql2 is preferable if any error related to AUTH_MODE
+const mysql = require('mysql')
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
@@ -16,7 +16,6 @@ const connection = mysql.createConnection({
 })
 
 
-//This is a small change
 
 
 app.get('/get', (req, res) => {
@@ -27,7 +26,7 @@ app.post('/upload',express.json(), (req, res) => {
 
 
   connection.query("INSERT INTO `test_db`.`data` (`email`,`name`) VALUES ('"+req.body.email+"','"+req.body.name+"')")
-  console.log("data putted : "+req.body.email+" and "+req.body.name)
+  console.log("data inserted : "+req.body.email+" and "+req.body.name)
 
 
 
